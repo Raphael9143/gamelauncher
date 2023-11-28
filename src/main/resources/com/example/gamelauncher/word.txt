@@ -1,0 +1,196 @@
+apple-qua táo
+orange-cam
+banana-chuối
+grape-nho
+melon-dưa hấu
+kiwi-kiwi
+strawberry-dâu tây
+blueberry-nho đen
+pineapple-dứa
+peach-đào
+lemon-lê mơ
+lime-chanh xanh
+pear-lê
+watermelon-dưa hấu
+mango-xoài
+avocado-bơ
+cherry-anh đào
+plum-mận
+raspberry-dâu rừng
+blackberry-dâu đen
+coconut-dừa
+pomegranate-lựu
+fig-lựu đâm
+papaya-đu đủ
+dragonfruit-thanh long
+cucumber-dưa leo
+carrot-cà rốt
+broccoli-bông cải xanh
+tomato-cà chua
+potato-khoai tây
+onion-hành tây
+garlic-tỏi
+ginger-gừng
+pepper-hạt tiêu
+salt-muối
+sugar-đường
+flour-bột mỳ
+rice-gạo
+bread-bánh mì
+butter-bơ
+cheese-phô mai
+milk-sữa
+yogurt-sữa chua
+egg-trứng
+chicken-gà
+beef-bò
+pork-lợn
+fish-cá
+shrimp-tôm
+lobster-tôm hùm
+crab-cua
+oyster-hàu
+clam-ngao
+scallop-sò điệp
+squid-mực
+octopus-bạch tuộc
+salmon-cá hồi
+tuna-cá ngừ
+trout-cá hồi nước ngọt
+cod-cá tuyết
+haddock-cá haddock
+herring-cá trích
+mackerel-cá thu
+sardine-cá mòi
+anchovy-cá cơm
+lettuce-rau diếp
+spinach-rau bina
+kale-cải xanh
+cabbage-bắp cải
+broccoli-bông cải xanh
+cauliflower-bông cải trắng
+peas-đậu hủ
+beans-hạt đậu
+carrot-cà rốt
+corn-bắp ngô
+asparagus-măng tây
+bell pepper-ớt chuông
+mushroom-nấm
+onion-hành tây
+garlic-tỏi
+ginger-gừng
+zucchini-bí ngô
+eggplant-cà tím
+radish-củ cải trắng
+cucumber-dưa leo
+tomato-cà chua
+potato-khoai tây
+sweet potato-khoai lang
+pumpkin-bí ngô
+squash-bí đỏ
+avocado-bơ
+olive-oliu
+lemon-lê mơ
+lime-chanh xanh
+orange-cam
+grapefruit-bưởi
+pomegranate-lựu
+kiwi-kiwi
+pineapple-dứa
+strawberry-dâu tây
+blueberry-nho đen
+raspberry-dâu rừng
+blackberry-dâu đen
+banana-chuối
+grape-nho
+watermelon-dưa hấu
+mango-xoài
+papaya-đu đủ
+dragonfruit-thanh long
+apricot-mơ
+nectarine-mơ
+peach-đào
+plum-mận
+cherry-anh đào
+fig-lựu đâm
+dates-chuối hột
+raisins-nho khô
+prunes-mận khô
+walnut-hạt óc chó
+almond-hạt hạnh nhân
+cashew-hạt điều
+peanut-lạc
+hazelnut-hạt dẻ cười
+sunflower seeds-hạt hướng dương
+pumpkin seeds-hạt bí ngô
+sesame seeds-hạt mè
+quinoa-hạt lúa mạch
+brown rice-gạo lứt
+oats-yến mạch
+barley-lúa mạch
+millet-kê
+couscous-cuscus
+pasta-mì ống
+bread-bánh mì
+tortilla-bánh mì mỏng
+baguette-bánh mì gói
+croissant-bánh ngọt Pháp
+pancake-bánh xèo
+waffle-bánh waffle
+pizza-bánh pizza
+hamburger-bánh hamburger
+hot dog-xúc xích
+sandwich-bánh sandwich
+sushi-sushi
+sashimi-sashimi
+ramen-ramen
+pho-phở
+pad thai-pad thai
+curry-cà ri
+burger-bánh mì hamburger
+fries-khoai tây chiên
+onion rings-ngọn hành chiên
+chicken wings-cánh gà
+mozzarella sticks-thanh phô mai chiên
+spring rolls-nem cuốn
+potstickers-bánh gyoza
+calamari-mực chiên
+shrimp tempura-tôm chiên xù
+fish and chips-cá và khoai tây chiên
+ice cream-kem
+gelato-gelato
+sorbet-sorbet
+frozen yogurt-sữa chua đông lạnh
+cake-bánh ngọt
+cupcake-bánh bí ngô
+cookies-bánh quy
+brownies-bánh brownie
+pie-bánh ngọt nhân
+cheesecake-bánh phô mai
+chocolate-truffle sô cô la
+candy-kẹo
+lollipop-kẹo mút
+caramel-kem caramel
+toffee-kẹo bơ
+marshmallow-kẹo bơ
+gum-kẹo cao su
+chips-khoai tây chiên
+pretzels-bánh que
+popcorn-bỏng ngô
+nuts-hạt giống
+trail mix-hạt trộn
+dried fruit-trái cây khô
+beverage-nước uống
+water-nước
+tea-trà
+coffee-cà phê
+juice-nước ép
+soda-nước ngọt
+lemonade-nước chanh
+iced tea-trà lạnh
+hot chocolate-sô cô la nóng
+smoothie-sinh tố
+milkshake-nước sữa hấp dẫn
+cocktail-hỗn hợp rượu
+beer-bia
+wine-rượu vang

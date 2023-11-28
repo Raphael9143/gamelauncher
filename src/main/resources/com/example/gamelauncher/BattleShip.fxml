@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamelauncher.BattleShipController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <MediaView fitHeight="600.0" fitWidth="900.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView disable="true" fitHeight="68.0" fitWidth="74.0" layoutX="14.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="461.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="818.0" AnchorPane.topAnchor="71.0">
+               <image>
+                  <Image url="@battleship/rotate.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="74.0" layoutX="382.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="461.0" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="71.0">
+               <image>
+                  <Image url="@battleship/tick.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <VBox alignment="CENTER" layoutX="478.0" layoutY="352.0" prefHeight="150.0" prefWidth="400.0" style="-fx-border-color: black;">
+               <children>
+                  <Label fx:id="word1" prefHeight="25.0" prefWidth="400.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="word2" layoutX="11.0" layoutY="96.0" prefHeight="25.0" prefWidth="400.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="word3" layoutX="11.0" layoutY="110.0" prefHeight="25.0" prefWidth="400.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="word4" layoutX="11.0" layoutY="124.0" prefHeight="25.0" prefWidth="400.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="word5" layoutX="11.0" layoutY="137.0" prefHeight="25.0" prefWidth="400.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="word6" layoutX="11.0" layoutY="151.0" prefHeight="25.0" prefWidth="400.0" style="-fx-border-color: black;">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="653.0" layoutY="321.0" prefHeight="30.0" prefWidth="50.0" text="Word" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="playButton" fitHeight="97.0" fitWidth="98.0" layoutX="630.0" layoutY="196.0" onMouseClicked="#start" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="307.0" AnchorPane.leftAnchor="630.0" AnchorPane.rightAnchor="173.0" AnchorPane.topAnchor="196.0">
+               <image>
+                  <Image url="@battleship/play.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="exitButton" fitHeight="90.0" fitWidth="97.0" layoutX="796.0" layoutY="14.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="496.0" AnchorPane.leftAnchor="796.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@battleship/exit.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <VBox alignment="CENTER" layoutX="14.0" layoutY="142.0" prefHeight="450.0" prefWidth="450.0" spacing="4.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button00" disable="true" mnemonicParsing="false" onAction="#button00" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button10" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button10" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button20" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button20" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button30" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button30" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button40" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button40" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button50" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button50" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button60" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button60" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button70" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button70" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button80" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button80" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button90" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button90" prefHeight="40.0" prefWidth="40.0" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button01" disable="true" mnemonicParsing="false" onAction="#button01" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button11" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button11" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button21" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button21" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button31" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button31" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button41" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button41" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button51" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button51" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button61" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button61" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button71" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button71" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button81" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button81" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button91" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button91" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button02" disable="true" mnemonicParsing="false" onAction="#button02" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button12" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button12" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button22" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button22" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button32" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button32" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button42" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button42" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button52" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button52" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button62" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button62" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button72" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button72" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button82" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button82" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button92" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button92" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button03" disable="true" mnemonicParsing="false" onAction="#button03" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button13" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button13" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button23" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button23" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button33" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button33" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button43" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button43" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button53" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button53" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button63" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button63" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button73" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button73" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button83" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button83" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button93" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button93" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button04" disable="true" mnemonicParsing="false" onAction="#button04" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button14" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button14" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button24" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button24" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button34" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button34" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button44" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button44" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button54" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button54" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button64" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button64" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button74" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button74" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button84" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button84" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button94" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button94" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button05" disable="true" mnemonicParsing="false" onAction="#button05" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button15" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button15" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button25" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button25" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button35" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button35" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button45" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button45" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button55" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button55" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button65" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button65" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button75" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button75" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button85" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button85" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button95" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button95" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button06" disable="true" mnemonicParsing="false" onAction="#button06" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button16" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button16" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button26" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button26" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button36" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button36" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button46" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button46" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button56" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button56" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button66" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button66" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button76" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button76" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button86" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button86" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button96" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button96" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button07" disable="true" mnemonicParsing="false" onAction="#button07" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button17" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button17" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button27" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button27" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button37" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button37" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button47" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button47" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button57" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button57" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button67" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button67" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button77" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button77" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button87" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button87" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button97" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button97" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button08" disable="true" mnemonicParsing="false" onAction="#button08" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button18" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button18" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button28" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button28" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button38" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button38" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button48" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button48" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button58" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button58" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button68" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button68" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button78" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button78" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button88" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button88" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button98" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button98" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="436.0" spacing="4.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="button09" disable="true" mnemonicParsing="false" onAction="#button09" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button19" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button19" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button29" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button29" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button39" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button39" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button49" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button49" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button59" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button59" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button69" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button69" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button79" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button79" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button89" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button89" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="button99" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button99" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5;" stylesheets="@values/styles.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="button_ship" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="messageLabel" alignment="CENTER" layoutX="593.0" layoutY="142.0" prefHeight="30.0" prefWidth="170.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <HBox layoutX="87.0" layoutY="111.0" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="health1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health2" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health3" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health4" fitHeight="30.0" fitWidth="30.0" layoutX="71.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health5" fitHeight="30.0" fitWidth="30.0" layoutX="101.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health6" fitHeight="30.0" fitWidth="30.0" layoutX="132.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health7" fitHeight="30.0" fitWidth="30.0" layoutX="162.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health8" fitHeight="30.0" fitWidth="30.0" layoutX="192.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health9" fitHeight="30.0" fitWidth="30.0" layoutX="223.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="health10" fitHeight="30.0" fitWidth="30.0" layoutX="253.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@battleship/health.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
